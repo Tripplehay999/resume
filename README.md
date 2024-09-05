@@ -96,5 +96,5 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 
 ---
 
-Feel free to customize this README file further to match your specific project setup and preferences.
+
 
