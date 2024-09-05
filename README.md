@@ -43,7 +43,7 @@ To set up a local copy of the portfolio website, follow these steps:
 
 1. **Clone the Repository**: 
    ```bash
-   git clone https://github.com/yourusername/portfolio-website.git
+   git clone https://github.com/tripplehay999/portfolio-website.git
    ```
 
 2. **Navigate to the Project Directory**:
