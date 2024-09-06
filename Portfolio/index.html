@@ -6,21 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
+    <script src="script.js"></script>
+    <title>AJ'S Portfolio Website</title>
 </head>
 <body>
     <header>
         <a href="#" class="logo">AJ</a>
-
-        <nav>
-            <a href="#" class="active"> Home</a>
-            <a target="_blank" href="about/about.html" >About</a>
-            <a target="_blank" href="services/services.html" >Services</a>
-            <a target="_blank" href="skills/skills.html" >Skills</a>
-            <a target="_blank" href="education/education.html" >Education</a>
-            <a target="_blank" href="#" >Contact</a>
+        <nav id="navbar">
+            <a href="#" class="active">Home</a>
+            <a target="_blank" href="about/about.html">About</a>
+            <a target="_blank" href="./resume/resume.html">Hire Me</a>
+            <a target="_blank" href="skills/skills.html">Skills</a>
+            <a target="_blank" href="education/education.html">Education</a>
+            <a target="_blank" href="../about/about.html/#contact">Contact</a>
         </nav>
+        <div id="mobile-menu" class="menu-toggle">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-times" style="display: none;"></i>
+        </div>
     </header>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navbar = document.getElementById('navbar');
+        const header = document.querySelector('header');
+    
+        // Toggle mobile menu visibility
+        mobileMenu.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Toggles visibility of nav
+            mobileMenu.classList.toggle('active'); // Changes menu icon
+            const barsIcon = mobileMenu.querySelector('.fa-bars');
+            const timesIcon = mobileMenu.querySelector('.fa-times');
+    
+            // Toggle between hamburger and X icon
+            if (mobileMenu.classList.contains('active')) {
+                barsIcon.style.display = 'none';
+                timesIcon.style.display = 'block';
+            } else {
+                barsIcon.style.display = 'block';
+                timesIcon.style.display = 'none';
+            }
+        });
+    
+        // Change navbar background on scroll
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+    
+    
+    
+        
     <section class="home">
         <div class="home-img">
             <img src="main.jpg" alt="">
@@ -36,7 +76,7 @@
                 <a href="https://x.com/jiggythedev"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://instagram.com/futurenoogler/"><i class="fa-brands fa-instagram"></i></a>
             </div>
-            <a href="#" class="btn">Hire me</a>
+            <a href="./resume/resume.html" class="btn">Hire me</a>
         </div>
     </section>
 </body>
